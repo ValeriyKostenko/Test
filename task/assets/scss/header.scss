@@ -1,0 +1,319 @@
+/* Header */
+
+.header {
+  flex: 1 1 auto;
+  position: relative;
+  height: 1000px;
+  max-height: 1000px;
+  background: #f0d88a;
+  @media (max-width: 992px) {
+    max-height: 660px;
+  }
+  @media (max-width: 768px) {
+    max-height: 440px;
+  }
+  &__carousel-indicators {
+    justify-content: space-between;
+    bottom: 74px;
+  }
+  &__carousel-indicators .active {
+    position: relative;
+  }
+  &__slideBullet {
+    width: 100%;
+    max-width: 280px;
+    font-family: Montserrat,sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #fff;
+    height: 3px;
+    text-transform: uppercase;
+    @media (max-width: 1200px) {
+      max-width: 210px;
+    }
+    @media (max-width: 992px) {
+      max-width: 140px;
+    }
+    @media (max-width: 768px) {
+      max-width: 70px;
+      font-size: 11px;
+    }
+    @media (max-width: 600px) {
+      font-size: 8px;
+    }
+  }
+  &__carousel-indicators li{
+    width: 100%;
+    margin: 0 0 21px 0;
+  }
+  &__carousel-indicators .active:after {
+    content: '';
+    width: 25%;
+    max-width: 70px;
+    background: #f38181;
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    height: 3px;
+    left: 0px;
+  }
+  &__slideBullet span {
+    font-family: Montserrat,sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    margin-right: 4px;
+    margin-top: 21px;
+    @media (max-width: 768px) {
+      font-size: 13px;
+    }
+  }
+  &__carousel,
+  &__carousel-inner,
+  &__carousel-item {
+    height: inherit;
+    @media (max-width: 992px) {
+      max-height: 660px;
+    }
+    @media (max-width: 768px) {
+      max-height: 440px;
+    }
+  }
+  &__imgFrst,
+  &__imgThrd {
+    visibility: hidden;
+  }
+  &__imgFrst:before,
+  &__imgThrd:before {
+    content: '';
+    visibility: visible;
+    display: block;
+    background: url(../img/bannerback.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+  } 
+  &__imgScnd,
+  &__imgFrth {
+    visibility: hidden;
+  }
+  &__imgScnd:before,
+  &__imgFrth:before {
+    content: '';
+    visibility: visible;
+    display: block;
+    background-image: url(../img/bannerbackuptodown.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+  } 
+  &__carousel-control-prev,
+  &__carousel-control-next {
+    display: none;
+  } 
+  &__container {
+    display: block;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 66px;
+    &:before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      background: #f1da8a;
+      height: 66px;
+      z-index: -1;     
+    } 
+  } 
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    height: 66px; 
+    max-width: 1200px; 
+    z-index: 2;     
+  }
+  &__logo {
+    margin-left: 0px;
+    margin-top: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: #ffffff;
+    width: 100px;
+    display: block;
+  }
+  &__nav {
+    @media (max-width: 768px) {
+      display: flex;
+    }
+  }
+  &__navList {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    max-width: 630px;
+    float: right;
+    margin-top: 38px;
+    @media (max-width: 768px) {
+      justify-content: flex-end;
+      margin-right: 25px;
+    }
+  }
+  &__navList li > a {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding-bottom: 12px;
+    &:hover {
+      color: #fce38a;
+      border-bottom: 3px solid #fce38a;
+    }
+  }
+  &__seek {
+    background: transparent;
+    border: none;
+    outline: none;
+  }  
+  &__searcher {
+    position: absolute;
+    top: -100%;
+    right: 70px;
+  }
+  &__searcher.show {
+    display: flex;
+    position: absolute;
+    min-width: 250px;
+    width: 100%;
+    height: 34px;
+    border: 1px solid #f1da8a;  
+    z-index: 3;
+    right: 5%;
+    top: 30px;
+    padding-left: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #e98283;
+
+    @media (max-width: 992px) {
+      top: 68px;
+    }
+    @media (max-width: 600px) {
+      right: 10%;
+    }
+  }
+  &__searcher::placeholder {
+    padding-left: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #f1da8a;
+  }
+  &__desktop {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  &__burger {
+    display: none;
+    @media (max-width: 768px) {
+      display: block;
+      position: relative;
+      min-width: 40px;
+      height: 40px;
+      background: #f1da8a;
+      border-radius: 12px;
+      margin-top: 25px;
+    }
+    &:before,
+    &:after {
+      content: '';
+      background: #e98283;
+      position: absolute;
+      width: 80%;
+      height: 2px;
+      left: 4px;
+      transition: all .3s ease 0s;
+    }
+    &:before {
+      top: 10px;
+    }
+    &:after {
+      bottom: 10px;
+    }
+  }
+  &__burger span {
+    position: absolute;
+    left: 4px;
+    width: 80%;
+    height: 2px;
+    background: #e98283;
+    top: 19px;
+    transition: all .3s ease 0s;
+  }
+  &__burger.active:before {
+    transform: rotate(45deg);
+    top: 19px;
+  }
+  &__burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 19px;
+  }
+  &__burger.active span {
+    transform: scale(0);
+  }
+  &__mobMenu {
+    top: -1000%;
+    position: absolute;
+  }
+  &__mobMenu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: #e98283;
+    min-height: 370px;
+    height: 100%;
+    z-index: 16;
+    width: 100%;
+    left: 0px;
+    padding: 0px;
+    top: 70px;
+    transition: all 1s ease;
+  }
+  &__mobMenu ul li a {
+    display: block;
+    margin: 25px;
+    color: #f1da8a;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  &__banner {
+    display: block;
+    margin-top: 160px;
+    text-align: center;
+    z-index: 2;
+    @media (max-width: 992px) {
+      margin-top: 80px;
+    }
+    @media (max-width: 768px) {
+      margin-top: 40px;
+    }
+  }
+
+}

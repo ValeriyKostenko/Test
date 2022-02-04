@@ -1,0 +1,167 @@
+.ourWork {
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+  }
+  &__uptitle {
+    font-family: 'Kaushan Script', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #333333;
+    margin-top: 112px;
+    margin-bottom: 17px;
+    @media (max-width: 992px) {
+      margin: 75px 0 12px 0;
+      font-size: 16px;
+    }
+    @media (max-width: 600px) {
+      margin: 40px 0 6px 0;
+    }
+  }
+  &__title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: #333333;
+    text-transform: uppercase;
+    height: 22px;
+    @media (max-width: 992px) {
+      font-size: 20px;
+    }
+  }
+  &__sub {
+    border-bottom: 3px solid #f38181;
+    padding-top: 38px;
+    max-width: 60px;
+    margin: auto;
+    @media (max-width: 992px) {
+      padding-top: 25px;
+    }
+  }
+  &__subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #a0a0a0;
+    max-width: 956px;
+    margin: auto;
+    padding-top: 41px;
+    line-height: 24px;
+    font-style: normal;
+    @media (max-width: 992px) {
+      padding-top: 28px;
+      font-size: 13px;
+    }
+  }
+  &__pictures {
+    margin: 98px 0 0 0;
+    @media (max-width: 992px) {
+      margin-top: 66px;
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  &__pict {
+    display: block;
+    max-width: 480px;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    padding: 0px;
+    @media (max-width: 768px) {
+      max-width: none;
+      display: flex;
+    }
+  }
+  &__picTeam {
+    display: block;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    @media (max-width: 768px) {
+      margin: auto;
+      width: 100%;
+    }
+    & img {
+      display: block;
+      max-width: 480px;
+      width: 100%;
+      height: 100%;
+      @media (max-width: 768px) {
+        max-width: none;
+      }
+    }
+    &:hover .ourWork__pictCover {
+      opacity: .7;
+      display: block;
+      position: absolute;
+      transition: all 1s ease-out;
+    }
+    &:hover .ourWork__picCoverSup {
+      display: flex;
+    }
+  }
+  &__pictCover {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 0px;
+    opacity: 0;
+    background: linear-gradient( 0deg, rgb(252,227,138) 0%, rgb(243,129,129) 100%);
+    background: -moz-linear-gradient( 0deg, rgb(252,227,138) 0%, rgb(243,129,129) 100%);
+    background: -webkit-linear-gradient( 0deg, rgb(252,227,138) 0%, rgb(243,129,129) 100%);
+    background: -ms-linear-gradient( 0deg, rgb(252,227,138) 0%, rgb(243,129,129) 100%);
+  }
+  &__picCoverSup {
+    display: none;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fdeee1;
+    text-transform: uppercase;
+    justify-content: center;
+    z-index: 3;
+    height: 100%;
+    text-align: center;
+    opacity: 1;
+    @media (max-width: 992px) {
+      font-size: 14px;
+    }
+    & span {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 15px;
+      color: #fdeee1;
+      line-height: 24px;
+      font-style: italic;
+      margin-top: 15px;
+      text-transform: none;
+      @media (max-width: 992px) {
+        font-size: 11px;
+      }
+    }
+    &::before {
+      content: '';
+      display: block;
+      background-image: url('assets/img/ourworkcovimg.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 23px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+}
+
+

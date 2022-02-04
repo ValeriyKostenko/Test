@@ -1,0 +1,52 @@
+.map {
+  flex: 1 1 auto;
+  position: relative;
+  height: 100%;
+  &__img {
+    background-image: url('assets/img/mapback.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+  } 
+  &__content {
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+  }
+  &__content img {
+    display: block;
+    max-width: 20px;
+    max-height: 26px;
+    margin: 57px 0 15px 0;
+  }
+  &__content p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #f38181;
+    text-transform: uppercase;
+    @media (max-width: 600px) {
+      font-size: 16px;
+    }
+  }
+  &__sub {
+    display: block;
+    border-bottom: 3px solid #f38181;
+    padding-top: 18px;
+    width: 60px;
+  }
+
+}
+
+
+
+

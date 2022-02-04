@@ -1,0 +1,207 @@
+.blog {
+  min-height: 770px;
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+  }
+  &__uptitle {
+    font-family: 'Kaushan Script', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #333333;
+    margin: 112px 0 18px 0;
+    @media (max-width: 992px) {
+      margin: 75px 0 12px 0;
+      font-size: 16px;
+    }
+    @media (max-width: 600px) {
+      margin: 40px 0 6px 0;
+    }
+  }
+  &__title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: #333333;
+    text-transform: uppercase;
+    height: 22px;
+    @media (max-width: 992px) {
+      font-size: 20px;
+    }
+  }
+  &__sub {
+    border-bottom: 3px solid #f38181;
+    padding-top: 38px;
+    max-width: 60px;
+    margin: auto;
+    @media (max-width: 992px) {
+      padding-top: 25px;
+    }
+  }
+  &__pictures {
+    margin-top: 46px;
+    justify-content: space-between;
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+    @media (max-width: 600px) {
+      margin-top: 28px;
+    }
+  }
+  &__pict {
+    display: block;
+    z-index: 1;
+    @media (max-width: 1200px) {
+      margin-bottom: 14px;
+    }  
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }   
+    & img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-width: 382px;
+      max-height: 240px;
+      @media (max-width: 992px) {
+        max-width: 255px;
+        max-height: 160px;
+      }
+    }
+    &:hover .blog__picBlog {
+      display: block;
+      transition: all 1s ease-out;
+      transform: scale(0.8);
+      @media (max-width: 992px) {
+       transform: none;
+      } 
+    }
+  }
+  &__date {
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 70px;
+    top: 157px;
+    margin-left: -11px;
+    background: #95e1d3;
+    @media (max-width: 992px) {
+      width: 40px;
+      height: 47px;
+      top: 104px;
+    }
+  }
+  &__dateNumber {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    color: #fff;
+    padding: 11px 0 5px 0;
+    @media (max-width: 992px) {
+      font-size: 20px;
+      padding: 5px 0 5px 0;
+    }
+  }
+  &__dateMonth {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #fff;
+    font-style: italic;
+  }
+  &__description {
+    max-width: 382px;
+    @media (max-width: 992px) {
+      max-width: 255px;
+    }
+  }
+  &__name a {
+    display: block;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #666;
+    text-transform: uppercase;
+    margin-top: 18px;
+    @media (max-width: 600px) {
+      font-size: 12px;
+    }
+  }
+  &__info {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #999;
+    padding: 13px 0 16px 0;
+    line-height: 24px;
+    border-bottom: 1px solid #e5e5e5;
+    @media (max-width: 600px) {
+      font-size: 13px;
+      padding: 6px 0 8px 0;
+    }
+  }
+  &__visitors {
+    width: 100%;
+    margin-top: 14px;
+  }
+  &__views,
+  &__comments {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #a6a6a6;
+    line-height: 24px;
+    font-style: italic;
+    margin-right: 19px;
+  }
+  &__views::before {
+    content: '';
+    display: inline-flex;
+    background-image: url('assets/img/blogview.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 12px;
+    vertical-align: -1px;
+    margin-right: 6px;
+  }
+  &__comments::before {
+    content: '';
+    display: inline-flex;
+    background-image: url('assets/img/blogchats.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 15px;
+    vertical-align: -3px;
+    margin-right: 6px;
+  }
+  &__link a {
+    display: block;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #95e1d3;
+    padding-top: 8px;
+    line-height: 24px;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__link a:hover {
+    color: #fce38a;
+  }
+}
+
+
+
